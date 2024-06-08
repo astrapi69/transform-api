@@ -20,6 +20,5 @@
  */
 module transform.api.main
 {
-
 	exports io.github.astrapi69.transform.api;
 }

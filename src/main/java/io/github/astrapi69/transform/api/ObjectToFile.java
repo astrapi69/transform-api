@@ -27,8 +27,8 @@ package io.github.astrapi69.transform.api;
 import java.io.File;
 
 /**
- * The interface {@link ObjectToFile} provides a single method that stores the given java object as a
- * transformable object to the given file
+ * The interface {@link ObjectToFile} provides a single method that stores the given java object as
+ * a transformable object to the given file
  */
 public interface ObjectToFile
 {

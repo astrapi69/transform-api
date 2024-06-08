@@ -25,7 +25,8 @@
 package io.github.astrapi69.transform.api;
 
 /**
- * The interface {@link TransformableToObject} provides a single method for transform the given transformable object to a java object
+ * The interface {@link TransformableToObject} provides a single method for transform the given
+ * transformable object to a java object
  *
  * @param <T>
  *            the generic type of the return type

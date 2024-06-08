@@ -27,8 +27,8 @@ package io.github.astrapi69.transform.api;
 import java.io.File;
 
 /**
- * If a class implements the interface {@link FileToGenericObject} can transform a given file to an
- * object without giving explicitly the class type of the return type
+ * The interface {@link FileToGenericObject} provides a single method for transform a given file to
+ * a java object without giving explicitly the class type of the return type
  */
 public interface FileToGenericObject
 {
@@ -39,8 +39,8 @@ public interface FileToGenericObject
 	 * @param <T>
 	 *            the generic type of the return type
 	 * @param file
-	 *            the file that contains the object
-	 * @return the object
+	 *            the file that contains the transformable object
+	 * @return the java object
 	 */
 	<T> T toObject(final File file);
 

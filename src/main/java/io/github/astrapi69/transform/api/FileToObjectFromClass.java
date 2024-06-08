@@ -27,8 +27,8 @@ package io.github.astrapi69.transform.api;
 import java.io.File;
 
 /**
- * If a class implements the interface {@link FileToObjectFromClass} can transform a given file to
- * an object with giving explicitly the class type of the return type
+ * The interface {@link FileToObjectFromClass} provides a single method for transform a given file
+ * to a java object with giving explicitly the class type of the return type
  */
 public interface FileToObjectFromClass
 {
@@ -42,7 +42,7 @@ public interface FileToObjectFromClass
 	 *            the file that contains the object
 	 * @param clazz
 	 *            the class from the class type of the object that will be returned
-	 * @return the object
+	 * @return the java object
 	 */
 	<T> T toObject(final File file, final Class<T> clazz);
 }

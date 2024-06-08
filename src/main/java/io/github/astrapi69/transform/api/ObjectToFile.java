@@ -27,19 +27,20 @@ package io.github.astrapi69.transform.api;
 import java.io.File;
 
 /**
- * The interface {@link ObjectToFile} provides a single method for convert an object to a xml string
+ * The interface {@link ObjectToFile} provides a single method that stores the given java object as a
+ * transformable object to the given file
  */
 public interface ObjectToFile
 {
 	/**
-	 * Converts the given object to a xml file
+	 * Transforms the given java object as a transformable object and store it to the given file
 	 *
 	 * @param <T>
 	 *            the generic type of the argument object type
 	 * @param object
-	 *            the object to convert to xml
+	 *            the java object to transform to a transformable object
 	 * @param file
-	 *            the file to copy the object as xml
+	 *            the file that stores the java object as a transformable object
 	 */
 	<T> void toFile(final T object, final File file);
 }

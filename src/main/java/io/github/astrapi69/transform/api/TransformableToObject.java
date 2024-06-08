@@ -25,8 +25,7 @@
 package io.github.astrapi69.transform.api;
 
 /**
- * If a class implements the interface {@link TransformableToObject} have to implement the method
- * for transformation to the generic object type
+ * The interface {@link TransformableToObject} provides a single method for transform the given transformable object to a java object
  *
  * @param <T>
  *            the generic type of the return type
@@ -36,11 +35,11 @@ package io.github.astrapi69.transform.api;
 public interface TransformableToObject<T, P>
 {
 	/**
-	 * Transforms the given transformable object to an object
+	 * Transforms the given transformable object to a java object
 	 *
 	 * @param transformable
-	 *            the input that will be transformed to the generic object
-	 * @return the object
+	 *            the input that will be transformed to the generic java object
+	 * @return the java object
 	 */
 	T toObject(final P transformable);
 }

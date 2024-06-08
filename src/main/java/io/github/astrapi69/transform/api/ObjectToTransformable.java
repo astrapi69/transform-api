@@ -26,7 +26,7 @@ package io.github.astrapi69.transform.api;
 
 
 /**
- * The interface {@link ObjectToTransformable} provides a single method for convert an object to a
+ * The interface {@link ObjectToTransformable} provides a single method for transform the given java object to a
  * transformable object
  *
  * @param <P>
@@ -37,11 +37,11 @@ package io.github.astrapi69.transform.api;
 public interface ObjectToTransformable<T, P>
 {
 	/**
-	 * Converts the given object to a xml string
+	 * Transforms the given java object to a transformable object
 	 *
 	 * @param object
-	 *            the object to convert to xml
-	 * @return the xml string from the given object
+	 *            the java object to transform to a transformable object
+	 * @return the transformable object from the given java object
 	 */
 	T toTransformable(final P object);
 }

@@ -57,6 +57,23 @@ then add the dependency to the dependencies area
     implementation("io.github.astrapi69:transform-api:$transformApiVersion")
 ```
 
+# with new libs.versions.toml file
+
+If you use the new libs.versions.toml file for new automatic catalog versions update
+
+```
+[versions]
+transform-api-version=${latestVersion}
+
+[libraries]
+transform-api = { module = "io.github.astrapi69:transform-api", version.ref = "transform-api-version" }
+```
+then add the dependency to the dependencies area
+
+```
+    implementation libs.transform.api
+```
+
 ## Maven dependency
 
 Maven dependency is now on sonatype.

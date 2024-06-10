@@ -30,6 +30,7 @@ import java.io.File;
  * The interface {@link ObjectToFile} provides a single method that stores the given java object as
  * a transformable object to the given file
  */
+@FunctionalInterface
 public interface ObjectToFile
 {
 	/**
@@ -37,10 +38,10 @@ public interface ObjectToFile
 	 *
 	 * @param <T>
 	 *            the generic type of the argument object type
-	 * @param object
+	 * @param javaObject
 	 *            the java object to transform to a transformable object
 	 * @param file
 	 *            the file that stores the java object as a transformable object
 	 */
-	<T> void toFile(final T object, final File file);
+	<T> void toFile(final T javaObject, final File file);
 }

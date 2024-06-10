@@ -33,15 +33,19 @@ package io.github.astrapi69.transform.api;
  *            the generic type of the input argument object type
  * @param <T>
  *            the generic type of the return type aka transformable object
+ * @deprecated use instead the interface {@link Transformable}. Note: will be removed in the next
+ *             major version
  */
-public interface ObjectToTransformable<T, P>
+@FunctionalInterface
+@Deprecated(forRemoval = true)
+public interface ObjectToTransformable<T, P> extends Transformable<T, P>
 {
 	/**
 	 * Transforms the given java object to a transformable object
 	 *
-	 * @param object
+	 * @param javaObject
 	 *            the java object to transform to a transformable object
 	 * @return the transformable object from the given java object
 	 */
-	T toTransformable(final P object);
+	T toTransformable(final P javaObject);
 }

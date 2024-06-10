@@ -63,7 +63,7 @@ If you use the new libs.versions.toml file for new automatic catalog versions up
 
 ```
 [versions]
-transform-api-version=${latestVersion}
+transform-api-version= "${latestVersion}"
 
 [libraries]
 transform-api = { module = "io.github.astrapi69:transform-api", version.ref = "transform-api-version" }

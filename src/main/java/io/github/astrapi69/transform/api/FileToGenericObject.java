@@ -29,19 +29,21 @@ import java.io.File;
 /**
  * The interface {@link FileToGenericObject} provides a single method for transform a given file to
  * a java object without giving explicitly the class type of the return type
+ *
+ * @param <T>
+ *            the generic type of the return type
  */
-public interface FileToGenericObject
+@FunctionalInterface
+public interface FileToGenericObject<T> extends Objectable<T, File>
 {
 
 	/**
 	 * Transforms the given {@link File} object to an object of the return type
 	 *
-	 * @param <T>
-	 *            the generic type of the return type
 	 * @param file
 	 *            the file that contains the transformable object
 	 * @return the java object
 	 */
-	<T> T toObject(final File file);
+	T toObject(final File file);
 
 }

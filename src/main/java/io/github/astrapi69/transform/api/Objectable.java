@@ -24,27 +24,24 @@
  */
 package io.github.astrapi69.transform.api;
 
-import java.io.File;
-
 /**
- * The interface {@link FileToObjectFromClass} provides a single method for transform a given file
- * to a java object with giving explicitly the class type of the return type
+ * The interface {@link Objectable} provides a single method for transform the given transformable
+ * object to a java object
  *
  * @param <T>
- *            the generic type of the argument object class type
+ *            the generic type of the return type
+ * @param <P>
+ *            the generic type of the input parameter aka the transformable object
  */
 @FunctionalInterface
-public interface FileToObjectFromClass<T> extends ObjectableFromClass<T, File>
+public interface Objectable<T, P>
 {
-
 	/**
-	 * Transforms the given json {@link File} object to an object of the given class type
-	 * 
-	 * @param file
-	 *            the file that contains the object
-	 * @param clazz
-	 *            the class from the class type of the object that will be returned
+	 * Transforms the given transformable object to a java object
+	 *
+	 * @param transformable
+	 *            the input that will be transformed to the generic java object
 	 * @return the java object
 	 */
-	T toObject(final File file, final Class<T> clazz);
+	T toObject(final P transformable);
 }
